@@ -4,10 +4,32 @@
     padding: 0;
 }
 body{
-    border-top: 1vh solid #cce1f4;
-    border-bottom: 1vh solid #cce1f4;
-    border-left: 1vh solid #cce1f4;
-    border-right: 1vh solid #cce1f4;
+    border-top: 1vh solid #accbe8;
+    border-bottom: 1vh solid #accbe8;
+    border-left: 1vh solid #accbe8;
+    border-right: 1vh solid #accbe8;
+    border-radius: 20px;
+    background-color: black;
+}
+button{
+    margin-top: 1em;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: black;
+    color: aliceblue;
+}
+button:hover{
+    cursor: pointer;
+}
+input{
+    border: 1px solid black;
+    border-radius: 5px;
+}
+#hideOptionScreen{
+    display: none;
+}
+#hideStockScreen{
+    display: none;
 }
 .container{
     margin: auto;
@@ -18,20 +40,25 @@ body{
 .stockHoldings{
     width: 50%;
     height: 100%;
-    background-color: #3d3737;
+    background-color: #813405;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    border: 2px solid #171738;
+    border-radius: 20px;
+    color: aliceblue;
 }
 .options{
     width: 50%;
     height: 100%;
-    background-color: #5e5d5d;
+    background-color: #8c86aa;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: 2px solid #d4d6b9;
+    border-radius: 20px;
 }
 .display{
     margin: auto;
@@ -42,10 +69,17 @@ body{
 .stockDisplay{
     width: 50%;
     height: 100%;
-    background-color: #61655a;
+    background-color: #171738;
+    border: 2px solid #813405;
+    border-radius: 20px;
+    color: aliceblue;
+    padding: 1em;
 }
 .optionsDisplay{
     width: 50%;
     height: 100%;
-    background-color: #4d4d45;
+    background-color: #d4d6b9;
+    border: 2px solid #8c86aa;
+    border-radius: 20px;
+    padding: 1em;
 }

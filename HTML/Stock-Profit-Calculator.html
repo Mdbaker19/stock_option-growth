@@ -11,24 +11,88 @@
 <body>
 <main class="container">
     <div class="stockHoldings">
-        <h1>STOCK INFO HERE</h1>
+        <label for="ticker">Symbol</label>
+        <input id="ticker" placeholder="Ticker" onfocus="this.value=''">
+        <label for="boughtPrice">Purchase Price</label>
+        <input id="boughtPrice" placeholder="$/share" onfocus="this.value=''">
+        <label for="targetPrice">Target Price</label>
+        <input id="targetPrice" placeholder="Goal Value" onfocus="this.value=''">
+        <label for="shareQuantity">Share Amount</label>
+        <input id="shareQuantity" placeholder="Quantity" onfocus="this.value=''">
+        <button id="submitStockData">Calculate</button>
     </div>
     <div class="options">
-        <h1>OPTIONS INFO HERE</h1>
+        <div class="selector">
+            <input type="radio" name="contractType" id="call">
+            <label for="call">Call</label>
+            <input type="radio" name="contractType" id="put">
+            <label for="put">Put</label>
+        </div>
+        <label for="optionTicker">Symbol</label>
+        <input id="optionTicker" placeholder="Ticker" onfocus="this.value=''">
+        <label for="optionPrice">Purchase Price</label>
+        <input id="optionPrice" placeholder="$/contract" onfocus="this.value=''">
+        <label for="goalPrice">Target Price</label>
+        <input id="goalPrice" placeholder="Goal Value" onfocus="this.value=''">
+        <label for="contractAmount">Quantity</label>
+        <input id="contractAmount" placeholder="Quantity" onfocus="this.value=''">
+        <button id="submitOptionData">Calculate</button>
     </div>
 </main>
-<footer class="display">
+<div class="display">
+    <button id="hideStockScreen">Show Breakdown</button>
     <table class="stockDisplay">
         <tr>
-            <th>DISPLAY TABULAR STOCK INFO HERE</th>
+            <th>STOCK DATA</th>
+        </tr>
+        <tr>
+            <td>Stock</td>
+            <td><span id="stockName">---</span></td>
+        </tr>
+        <tr>
+            <td>Current Price</td>
+            <td>$<span id="stockCurrentPrice">---</span></td>
+        </tr>
+        <tr>
+            <td>Target Price</td>
+            <td>$<span id="stockTargetPrice">---</span></td>
+        </tr>
+        <tr>
+            <td>Current Value</td>
+            <td>$<span id="stockValue">---</span></td>
+        </tr>
+        <tr>
+            <td>Current Gain/Loss</td>
+            <td>$<span id="stock-gain-loss">---</span></td>
         </tr>
     </table>
+    <button id="hideOptionScreen">Show Breakdown</button>
     <table class="optionsDisplay">
         <tr>
-            <th>DISPLAY TABULAR OPTIONS INFO HERE</th>
+            <th>OPTIONS DATA</th>
+        </tr>
+        <tr>
+            <td>Stock</td>
+            <td><span id="stockNameOption">---</span></td>
+        </tr>
+        <tr>
+            <td>Current Price</td>
+            <td>$<span id="optionCurrentPrice">---</span></td>
+        </tr>
+        <tr>
+            <td>Target Price</td>
+            <td>$<span id="optionTargetPrice">---</span></td>
+        </tr>
+        <tr>
+            <td>Current Value</td>
+            <td>$<span id="optionValue">---</span></td>
+        </tr>
+        <tr>
+            <td>Current Gain/Loss</td>
+            <td>$<span id="option-gain-loss">---</span></td>
         </tr>
     </table>
-</footer>
+</div>
 <script src="../JS/Stock-Profit-Calculator.js"></script>
 </body>
 </html>
